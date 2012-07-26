@@ -50,7 +50,7 @@ public abstract class AbstractRequestCallback<T> implements RequestCallback {
             callback.onFailure(this.method, new FailedStatusCodeException("TIMEOUT", 999));
         } else if (isFailedStatus(response)) {
             callback.onFailure(this.method, new FailedStatusCodeException(response.getStatusText(),
-                    response.getStatusCode()));
+                    response.getStatusCode(), response.getText()));
         } else {
             T value;
             try {

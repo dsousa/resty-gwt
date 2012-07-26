@@ -28,13 +28,23 @@ public class FailedStatusCodeException extends RuntimeException {
 
     private final int statusCode;
 
+    private final String payload;
+
     public FailedStatusCodeException(String message, int statusCode) {
+        this(message, statusCode, null);
+    }
+
+    public FailedStatusCodeException(String message, int statusCode, String payload) {
         super(message);
         this.statusCode = statusCode;
+        this.payload = payload;
     }
 
     public int getStatusCode() {
         return statusCode;
     }
 
+    public String getPayload() {
+        return payload;
+    }
 }
