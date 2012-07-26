@@ -456,7 +456,7 @@
 
   <modules>
     <module>restygwt</module>
-    <module>restygwt-website</module>
+    <!--<module>restygwt-website</module>-->
   </modules>
 
 </project>
